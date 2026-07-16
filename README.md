@@ -6,7 +6,6 @@
     <td align="center">
       <h1>Palworld Relic Teleporter</h1>
     </td>
-    <td width="100"></td>
   </tr>
 </table>
 

@@ -1,10 +1,16 @@
-<div style="display: flex; align-items: center; position: relative;">
-  <img src="assets/logo.png" alt="Logo" width="100"  style="border-radius: 20px;">
+<table width="100%">
+  <tr>
+    <td width="100">
+      <img src="assets/logo.png" alt="Logo" width="100">
+    </td>
+    <td align="center">
+      <h1>Palworld Relic Teleporter</h1>
+    </td>
+    <td width="100"></td>
+  </tr>
+</table>
 
-  <h1 style="position: absolute; left: 50%; transform: translateX(-50%);">
-    Palworld Relic Teleporter
-  </h1>
-</div><br>
+<br>
 
 A small UE4SS mod for **Palworld on Windows** that displays a searchable list of relic statues and teleports the local player to the selected position.
 

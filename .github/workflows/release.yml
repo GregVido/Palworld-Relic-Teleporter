@@ -1,0 +1,31 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create install archive
+        run: |
+          cd install
+          zip -r "../Palworld-Relic-Teleporter-${GITHUB_REF_NAME}.zip" .
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            "Palworld-Relic-Teleporter-${GITHUB_REF_NAME}.zip" \
+            --title "Palworld Relic Teleporter ${GITHUB_REF_NAME}" \
+            --generate-notes
